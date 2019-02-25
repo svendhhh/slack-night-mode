@@ -1231,6 +1231,12 @@ ts-mention { background: rgba(130, 130, 130, 0.1) !important; color: #e6e6e6 !im
 
 .c-message_kit__file__meta__text i.c-icon { color: #FFFF00; }
 
+.c-message_kit__file__meta__text i.c-icon { color: #FFFF00; }
+
+.c-message_kit__file__meta__text i.c-icon--caret-right { color: #FFFF00; }
+
+.c-message_kit__file__meta__text i.c-icon--inherit { color: #FFFF00; }
+
 .c-message__image_container { background: rgba(0, 0, 0, 0.1); }
 
 .c-message__image_wrapper:after { border-color: transparent; }
