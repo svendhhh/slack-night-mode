@@ -615,7 +615,7 @@
   .c-message__reply_bar_description { color: #949494; }
   .c-message__file_meta { color: #949494; }
   .c-message_kit__file__meta__text span { color: #FFFF00; }
-  .c-message_kit__file__meta__text i.icon { color: #FFFF00; }
+  .c-message_kit__file__meta__text i.c-icon { color: #FFFF00; }
   .c-message__image_container { background: rgba(0, 0, 0, 0.1); }
   .c-message__image_wrapper:after { border-color: transparent; }
   .attachment_group.has_container { background: #222; border: 1px solid #363636; }
