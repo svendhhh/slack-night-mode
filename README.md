@@ -5,16 +5,18 @@ A user style for easy Slack theming. [CC0](http://creativecommons.org/publicdoma
 
 ### Windows Desktop App 4.0
 
-1) First of all, make sure your slack are on the latest version (4.0.0)
+0) Make sure you have NPM installed or install it (https://blog.teamtreehouse.com/install-node-js-npm-windows)
+1) Make sure your slack are on the latest version (4.0.0)
 
 2) Open Command prompt, navigate to %localappdata%/slack/app-4.0.0/resources/
 
 3) Install npx with `npm install -g npx`
+4) Install Asar with `npm install -g asar`
 
-4) Unpack the app.asar with the command:`npx asar extract app.asar app.asar.unpacked`
+5) Unpack the app.asar with the command: `npx asar extract app.asar app.asar.unpacked`
 
-5) Insert the following code in the unpacked file `ssb-interop.bundle.js` 
-
+6) Insert the following code at the end of in the unpacked file `ssb-interop.bundle.js` 
+Note: It may look like mumbo-jumbo in the file, but it's just minified javascript - do not despair.
 ```
 document.addEventListener("DOMContentLoaded", function() {
     let webviews = document.querySelectorAll(".TeamView webview");
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
  });
 ```
 
-6) Repack the asar file: `npx asar pack app.asar.unpacked app.asar`
+7) Repack the asar file: `npx asar pack app.asar.unpacked app.asar`
 
 ## Themes
 
