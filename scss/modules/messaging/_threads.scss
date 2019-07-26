@@ -27,6 +27,15 @@
       color: $base-font-color;
     }
   }
+
+  #thread_notification_banner {
+    background-color: $color-shade-dark;
+    border-bottom-color: $color-shade-mid;
+
+    .banner_description {
+      color: $base-font-color;
+    }
+  }
 }
 
 #threads_view_banner.messages_banner {
@@ -45,6 +54,71 @@
   background: $color-base;
 }
 
+.p-message_container_loading {
+  background: $color-base;
+}
+
+.p-message_container_loading__msg {
+  color: $base-font-color;
+}
+
+.p-threads_view {
+  background: $color-base;
+
+  &__divider {
+    &_line,
+    &_label {
+      background: $color-shade-dark;
+      border-color: $color-shade-dark;
+      color: $base-font-color;
+    }
+  }
+
+  &__footer,
+  &_root {
+    border-color: $color-shade-darker;
+  }
+
+  &__default_background {
+    background: $color-shade-dark;
+  }
+
+  &_header {
+    &__channel_name,
+    &__participant_list {
+      color: $base-font-color;
+    }
+  }
+
+  .p_threads_view_load_newer_button,
+  .p_threads_view_load_older_button {
+    background: $color-shade-dark;
+    border-color: $color-shade-darker;
+
+    .c-link--button {
+      color: $base-link-color;
+    }
+  }
+
+  &_reply {
+    border-color: $color-shade-darker;
+
+    &--new_reply {
+      background: $color-shade-dark;
+    }
+  }
+}
+
+.p-threads_footer__input,
+.p-threads_footer__input--legacy {
+  .p-message_input_field {
+    background: $color-shade-dark;
+  }
+
+  .p-message_input_file_button {
+    background: $color-shade-dark;
+  }
+}
 
 ts-thread {
   background: $color-base;
@@ -135,4 +209,26 @@ ts-thread .thread_participants {
   .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container {
     color: $color-highlight;
   }
+}
+#file_reply_container .reply_limited,
+#reply_container .reply_limited,
+.reply_input_container .reply_limited,
+ts-thread .reply_input_container .reply_limited {
+  background-color: $color-shade-dark;
+  border-color: $color-shade-light;
+  color: $base-font-color;
+}
+
+#notification_banner {
+  background-color: $color-shade-dark;
+
+  h1,
+  h2 {
+    color: $base-font-color;
+  }
+}
+
+#notification_banner::before {
+  background-color: $color-shade-dark;
+  border-bottom-color: $color-shade-dark;
 }

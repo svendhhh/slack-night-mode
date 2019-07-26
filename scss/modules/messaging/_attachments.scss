@@ -22,11 +22,15 @@
   }
 
   &__author
-  &__autor--distinct {
+  &__author--distinct {
     color: $base-link-color;
   }
 
   &__author_link + .c-message_attachment__author_link {
+    color: $base-link-color;
+  }
+
+  &__author_name {
     color: $base-link-color;
   }
 
@@ -123,6 +127,18 @@
     &:after {
       border-color: transparent;
     }
+  }
+}
+
+.c-message_kit {
+  background: $color-shade-dark;
+
+  &__labels__label {
+    color: $color-highlight;
+  }
+
+  &__file__meta {
+    color: $base-font-color;
   }
 }
 
@@ -449,7 +465,7 @@
 .c-file_container--has_thumb {
   .c-file {
     &__actions::before {
-      background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), $color-shade-darkest 20px);
+      background-image: linear-gradient(90deg, $color-shadow-transparent, $color-shade-darkest 20px);
     }
   }
 }

@@ -137,6 +137,21 @@
   }
 }
 
+#footer_archives_preview {
+  background-color: $color-base;
+  border-top: 1px solid $color-shade-dark;
+
+  .c-archive_footer {
+    &__metadata {
+      color: $base-link-color;
+    }
+
+    &__title {
+      color: $base-link-color-active;
+    }
+  }
+}
+
 #footer_archives_table {
   color: $color-highlight;
 }
@@ -176,7 +191,8 @@
   }
 }
 
-.c-message {
+.c-message,
+.p-channel_details_section {
   &--editing {
     background: $color-shade-dark;
     border-color: $color-shade-dark;

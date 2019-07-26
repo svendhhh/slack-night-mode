@@ -14,7 +14,19 @@
 .c-mrkdwn__subteam--mention,
 .c-mrkdwn__subteam--mention:hover,
 .mention_yellow_bg {
-  color: $color-highlight !important;
+  background-color: $color-yellow;
+  color: $color-shade-dark;
+}
+
+.c-mrkdwn__user_group--link,
+a:link.c-mrkdwn__user_group--link {
+  background: $color-shade-dark;
+  color: $base-font-color;
+}
+
+.c-mrkdwn__user_group--link:hover,
+a:link.c-mrkdwn__user_group--link:hover {
+  background: $color-shade-mid;
 }
 
 .c-message {
@@ -232,6 +244,16 @@
   &__call_sub {
     color: $color-highlight;
   }
+
+  &_attachment {
+    &__author_name,
+    &__author_name.clink--button,
+    &__author_name.clink--button:active,
+    &__author_name.clink--button:focus,
+    &__author_name.clink--button:hover {
+      color: $base-font-color;
+    }
+  }
 }
 
 .c-message_actions {
@@ -277,16 +299,22 @@
   }
 }
 
+.c-app_badge {
+  background: $color-shade-light;
+  box-shadow: 0 0 2px $color-shadow-medium;
+  color: $color-highlight;
+}
+
 .c-message_list {
   &__unread_divider {
     &__separator {
-      border-color: $color-shade-light;
+      border-color: $color-highlight;
     }
 
     &__label {
-      background: $color-base;
+      background: $color-shade-light;
       box-shadow: 0 0 2px $color-shadow-medium;
-      color: $color-shade-light;
+      color: $color-highlight;
     }
   }
 
@@ -299,8 +327,16 @@
   }
 }
 
-.c-virtual_list__item--focus:focus .c-message_list__focus_indicator {
-  box-shadow: inset 0 0 0 3px rgba($color-shade-lightest, 0.8);
+.c-virtual_list {
+  &__item--focus:focus .c-message_list__focus_indicator {
+    box-shadow: inset 0 0 0 3px rgba($color-shade-lightest, 0.8);
+  }
+
+  .c-virtual_list--scrollbar .c-scrollbar .c-scrollbar--hidden,
+  .c-scrollbar__hider {
+    background: $color-shade-darkest;
+    border-color: $color-shade-dark;
+  }
 }
 
 ts-message {

@@ -192,7 +192,9 @@ textarea {
   }
 
   &.btn_attachment {
+    background-color: $color-shade-darkest;
     border-color: $color-shade-light;
+    color: $base-link-color;
 
     &:hover,
     &:focus {
@@ -341,4 +343,43 @@ textarea {
 
 .p-share_dialog_message_input {
   color: $base-font-color;
+}
+
+.c-texty_input {
+  .ql-placeholder {
+    color: $base-font-color;
+  }
+}
+
+.c-texty_autocomplete {
+  background: $color-base;
+  box-shadow: 0 0 0 1px $color-shade-lightest, 0 4px 12px 0 $color-shade-lightest;
+
+  &__result {
+    &--selected {
+      background: $color-shade-mid;
+    }
+
+    &_highlight,
+    &_highlight--selected {
+      background: $color-shade-dark;
+    }
+  }
+}
+
+.p-workspace {
+  &__input {
+    .p-message_input_field {
+      background: $color-base;
+      border-color: $color-shade-light;
+    }
+  }
+
+  &__primary_view_footer {
+    border-color: $color-shade-dark;
+  }
+
+  &__secondary_view {
+    border-color: $color-shade-dark;
+  }
 }

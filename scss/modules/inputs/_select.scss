@@ -22,3 +22,16 @@
     color: $base-font-color;
   }
 }
+
+.c-multi_select_input {
+  background: $color-shade-light;
+  background-color: $color-shade-light;
+}
+
+.c-token {
+  background: $color-shade-dark;
+}
+
+.c-multi_select_token__remove {
+  color: $color-shade-lightest;
+}

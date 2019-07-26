@@ -1,12 +1,26 @@
-#convo_tab #convo_tab_btns .close_flexpane {
-  &:focus,
-  &:hover {
+#convo_tab {
+  #convo_tab_btns .close_flexpane {
+    &:focus,
+    &:hover {
+      color: $base-font-color;
+    }
+  }
+
+  textarea.message_input {
     color: $base-font-color;
   }
-}
 
-#convo_tab textarea.message_input {
-  color: $base-font-color;
+  .message_input,
+  textarea#msg_text {
+    color: $base-font-color;
+  }
+
+  .p-threads_flexpane__separator_count {
+    color: $color-highlight;
+  }
+  .p-threads_flexpane__separator_line {
+    border-color: $color-highlight;
+  }
 }
 
 #reply_container,
@@ -54,11 +68,6 @@
   }
 }
 
-#convo_tab .message_input,
-#convo_tab textarea#msg_text {
-  color: $base-font-color;
-}
-
 ts-message.message:hover,
 ts-message.message:active,
 ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator), ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator), ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
@@ -70,4 +79,101 @@ ts-thread {
   .view_all_replies_container:hover {
     background-color: $color-shade-darker;
   }
+}
+
+.p-threads {
+  &_flexpane {
+    &__header {
+      background: $color-shade-dark;
+      border-color: $color-shade-light;
+      color: $base-font-color;
+
+      &_channel_name {
+        color: $base-link-color;
+      }
+    }
+  }
+
+  &_footer {
+    &__input_container {
+      .p-message_input_file_button,
+      .p-message_input_field,
+      .ql-placeholder {
+        background-color: $color-shade-dark;
+        color: $base-font-color;
+      }
+    }
+  }
+
+  &_view {
+    background-color: $color-shade-darker;
+
+    &__default_background {
+      background-color: $color-shade-darker;
+    }
+
+    &__divider {
+      &_label {
+        background-color: $color-shade-dark;
+        color: $base-font-color;
+      }
+
+      &_line {
+        border-top-color: $color-shade-dark;
+      }
+    }
+
+    &__footer {
+      border-color: $color-shade-dark;
+    }
+
+    &_header {
+      &__participant_list {
+        color: $base-font-color;
+      }
+
+      &__permalink {
+        color: $base-link-color !important;
+      }
+    }
+
+    &_reply {
+      border-color: $color-shade-dark;
+
+      &--new_reply {
+        background-color: $color-shade-dark;
+      }
+    }
+
+    &_root {
+      border-color: $color-shade-dark;
+    }
+  }
+}
+
+.p_threads {
+  &_view {
+    &_load_older_button,
+    &_load_newer_button {
+      background-color: $color-shade-darker;
+      border-color: $color-shade-dark;
+
+      &:hover {
+        background-color: $color-shade-dark;
+      }
+
+      .c-link--button {
+        color: $base-font-color;
+      }
+    }
+  }
+}
+
+.c-app_badge,
+.c-app_label {
+  color: $base-link-color;
+}
+
+.c-timestamp__label {
+  color: $base-font-color;
 }

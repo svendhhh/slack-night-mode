@@ -107,3 +107,35 @@
 .notification_prefs_icon::before {
   color: $base-font-color;
 }
+
+.channel_header {
+  .channel_header__tabs {
+    .channel_header__tab {
+      color: $base-link-color;
+
+      // Comment out per discussion in https://github.com/laCour/slack-night-mode/pull/208
+      //&.--active {
+      //  color: $base-link-color-active;
+      //}
+
+      &:hover {
+        color: $base-link-color-active;
+      }
+    }
+  }
+}
+
+.p-channel_details {
+  &__heading,
+  &__created_link,
+  &__created_link:hover,
+  &__similar_channels_channel :hover {
+    color: inherit;
+  }
+}
+
+.p-highlights_section {
+  &__group_title_label {
+    background: $color-shade-mid;
+  }
+}
