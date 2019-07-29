@@ -3,6 +3,60 @@ A user style for easy Slack theming. [CC0](http://creativecommons.org/publicdoma
 
 ## Usage
 
+## Our instructions
+
+### Windows Desktop App 4.0
+
+0) Make sure you have NPM installed or install it (https://blog.teamtreehouse.com/install-node-js-npm-windows)
+1) Make sure your slack are on the latest version (4.0.1)
+
+2) Open Command prompt, navigate to %localappdata%/slack/app-4.0.1/resources/
+
+3) Install npx with `npm install -g npx`
+4) Install Asar with `npm install -g asar`
+
+5) Unpack the app.asar with the command: `npx asar extract app.asar app.asar.unpacked`
+
+6) Insert the below code at the end of in the unpacked file `ssb-interop.bundle.js` 
+Note: It may look like mumbo-jumbo in the file, but it's just minified javascript - do not despair.
+
+7) Repack the asar file: `npx asar pack app.asar.unpacked app.asar`
+
+```
+document.addEventListener("DOMContentLoaded", function() {
+    let webviews = document.querySelectorAll(".TeamView webview");
+    const cssPath = 'https://raw.githubusercontent.com/svendhhh/slack-night-mode/master/css/raw/black.css';
+    let cssPromise = fetch(cssPath).then(response => response.text());
+    cssPromise.then(css => {
+       let s = document.createElement('style');
+       s.type = 'text/css';
+       s.innerHTML = css;
+       document.head.appendChild(s);
+    });    
+    webviews.forEach(webview => {
+       webview.addEventListener('ipc-message', message => {
+          if (message.channel == 'didFinishLoading')       
+             cssPromise.then(css => {
+                let script = `
+                      let s = document.createElement('style');
+                      s.type = 'text/css';
+                      s.id = 'slack-custom-css';
+                      s.innerHTML = \`${css}\`;
+                      document.head.appendChild(s);
+                      `
+                webview.executeJavaScript(script);
+             })
+       });
+    });
+ });
+```
+
+---
+
+
+## Original Readmy from laCour's project:
+
+
 ### Browser
 
 This theme requires that you use [a user styles extension](https://github.com/openstyles/stylus/wiki/Stylish-Alternatives) for your browser, such as Stylus (available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), and [Opera](https://addons.opera.com/en/extensions/details/stylus/)).
