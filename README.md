@@ -8,9 +8,9 @@ A user style for easy Slack theming. [CC0](http://creativecommons.org/publicdoma
 ### Windows Desktop App 4.0
 
 0) Make sure you have NPM installed or install it (https://blog.teamtreehouse.com/install-node-js-npm-windows)
-1) Make sure your slack are on the latest version (4.0.1)
+1) Make sure your slack are on the latest version (4.0.2)
 
-2) Open Command prompt, navigate to %localappdata%/slack/app-4.0.1/resources/
+2) Open Command prompt, navigate to %localappdata%/slack/app-4.0.2/resources/
 
 3) Install npx with `npm install -g npx`
 4) Install Asar with `npm install -g asar`
